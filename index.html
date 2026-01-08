@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Boks Oyunu</title>
+<title>Vur vur rahatlarsın</title>
 <style>
   body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #fdf6e3; /* Resim arkası için yumuşak bir renk */
+    background-color: #fdf6e3;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -25,21 +25,15 @@
     width: 100%;
     height: 100%;
     cursor: crosshair;
-    /* Resim yüklenmezse veya kenarlarda boşluk kalırsa görünecek renk */
     background-color: #fdf6e3; 
   }
 
-  /* GÜNCELLENEN KISIM: Resim Ayarları */
   .game-image {
     display: none;
     height: 100%;
     width: 100%;
     
-    /* ÖNEMLİ DEĞİŞİKLİK: 'cover' yerine 'contain' kullanıyoruz.
-       Bu sayede resim kesilmeden tamamı ekranda görünür. */
     object-fit: contain; 
-    
-    /* Resmi tam ortaya hizala */
     object-position: center center; 
     
     position: absolute;
@@ -50,7 +44,6 @@
 
   #idle-state { display: block; }
 
-  /* Titreme Animasyonları */
   .shake-right { animation: shakeR 0.2s ease-in-out; }
   @keyframes shakeR {
     0%, 100% { transform: translateX(0); }
@@ -71,7 +64,7 @@
     width: 100%;
     text-align: center;
     font-family: sans-serif;
-    color: rgba(0, 0, 0, 0.6); /* Yazı rengini biraz koyulaştırdım */
+    color: rgba(0, 0, 0, 0.6); 
     font-weight: bold;
     pointer-events: none;
     font-size: 1.1em;
@@ -87,7 +80,7 @@
   <img id="right-hook" class="game-image" src="right_kroche_tugce.png" alt="Sağ Kroşe">
 </div>
 
-<div id="info">Vurmak için ekrana tıkla! 👊</div>
+<div id="info">Vurmak için tıkla çekinme! 👊</div>
 
 <script>
   const container = document.getElementById('game-container');
@@ -158,3 +151,4 @@
 </body>
 
 </html>
+
